@@ -33,5 +33,5 @@ def shutdownInstance():
     return f"<p><b>Server [{app.config['ec2_instance_id']}] was shutdown</b></p>"
 
 if __name__ == '__main__':
-    port = int(environ.get('PORT', 80))
+    port = int(environ.get('SERVER_PORT'))
     app.run(host="0.0.0.0", port=port, debug=True)
